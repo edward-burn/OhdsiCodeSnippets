@@ -8,8 +8,8 @@
 # Yes? Ok, so please run the next three lines and give our atlas location, along with your login and password to Atlas so that we connect
 # note, you don´t need to change anything in the code for these three lines- they will generate a popup where you add your details
 baseUrl <- .rs.askForPassword("Atlas baseurl:")
-login <- .rs.askForPassword("Atlas username:")
-password  <- .rs.askForPassword("Atlas password:")
+user.login <- .rs.askForPassword("Atlas username:")
+user.password  <- .rs.askForPassword("Atlas password:")
 # note when run these should pop up to ask you to add them in interactively
 # this is to try and reduce the risk of accidently revealing sensitive information if this script is shared
 # So please try not to hard code them!
@@ -50,7 +50,7 @@ Atlas.ids<-""
 
 # get authentication ------
 authUrl <- paste0(baseUrl, "/user/login/db")
-login <- list(login = login, password = login)
+login <- list(login = user.login, password = user.password)
 r <- POST(authUrl, body = login, encode = "form")
 authHeader <- paste0("Bearer ", httr::headers(r)$bearer)
 
