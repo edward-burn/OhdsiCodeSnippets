@@ -6,6 +6,7 @@
 # I assume that you now in RStudio on AWS, and are inside the Rproj of your package
 
 # Yes? Ok, so please run the next three lines and give our atlas location, along with your login and password to Atlas so that we connect
+# note, you don´t need to change anything in the code for these three lines- they will generate a popup where you add your details
 baseUrl <- .rs.askForPassword("Atlas baseurl:")
 login <- .rs.askForPassword("Atlas username:")
 password  <- .rs.askForPassword("Atlas password:")
