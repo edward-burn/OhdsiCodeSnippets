@@ -14,7 +14,7 @@ password  <- .rs.askForPassword("Atlas password:")
 # So please try not to hard code them!
 
 # what is the name of the cohort diagnostics package?
-packageName <- "DiagAi" 
+packageName <- "" 
 
 # Next, load these three packages (you might need to install them first.....)
 library(httr) #from CRAN
